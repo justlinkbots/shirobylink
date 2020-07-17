@@ -115,4 +115,4 @@ async def mute_error(ctx,error):
 	#if isinstance (error, commands.CommandNotFound):
 	#await ctx.send(embed = discord.Embed(description=f':negative_squared_cross_mark: Ой!~ Такой команды не существует!~ Напиши $help, чтобы узнать доступные команды~ ') )	 
 token = os.environ.get('BOT_TOKEN')
-bot.run(str(token))
+client.run(str(token))
