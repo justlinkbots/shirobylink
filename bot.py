@@ -38,6 +38,11 @@ async def on_command_error(ctx, error):
 async def hi( ctx ):
 	author = ctx.message.author
 	await ctx.send( f'**Привет, {author.mention}! Рада тебя видеть! Я бот Shiro~**' )
+
+@client.command()
+async def ЗОО( ctx ):
+	author = ctx.message.author
+	await ctx.send( f'**Fuck youuuu!{author.mention}**' )
 #clear
 @client.command()
 @commands.has_permissions( administrator = True )
