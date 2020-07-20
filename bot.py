@@ -101,19 +101,19 @@ async def help(ctx):
 @clear.error
 async def perm_error(ctx,error):
     if isinstance (error, commands.MissingRequiredArgument):
-    	await ctx.send(embed = discord.Embed(description='**:negative_squared_cross_mark: Ой!~ Ты забыл указать колличество сообщений~**', colour = discord.Color.red() ))
+    	await ctx.send(embed = discord.Embed(description='**:x: Ой!~ Ты забыл указать колличество сообщений~**', colour = discord.Color.red() ))
     if isinstance (error, commands.MissingPermissions):
-    	await ctx.send(embed = discord.Embed(description='**:negative_squared_cross_mark: Ой!~ Только админы могут это делать! Извини~**', colour = discord.Color.red() ))
+    	await ctx.send(embed = discord.Embed(description='**:x: Ой!~ Только админы могут это делать! Извини~**', colour = discord.Color.red() ))
 
 @kick.error
 async def kick_error(ctx,error):
 	if isinstance (error, commands.MissingPermissions):
-		await ctx.send(embed = discord.Embed(description='**:negative_squared_cross_mark: Ой!~ Только админы могут это делать! Извини~**', colour = discord.Color.red() ))
+		await ctx.send(embed = discord.Embed(description='**:x: Ой!~ Только админы могут это делать! Извини~**', colour = discord.Color.red() ))
 
 @mute.error
 async def mute_error(ctx,error):
 	if isinstance (error, commands.MissingPermissions):
-		await ctx.send(embed = discord.Embed(description='**:negative_squared_cross_mark: Ой!~ Только админы могут это делать! Извини~**', colour = discord.Color.red() ))
+		await ctx.send(embed = discord.Embed(description='**:x: Ой!~ Только админы могут это делать! Извини~**', colour = discord.Color.red() ))
 #@ctx.error
 #@ctx.error
 #async def ctx_error(ctx,error):
