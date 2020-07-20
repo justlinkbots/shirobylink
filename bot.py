@@ -20,7 +20,7 @@ async def on_command_error(ctx, error):
 @client.event
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound ):
-        await ctx.send(embed = discord.Embed(description ='** :negative_squared_cross_mark: Ой!~ Такой команды не существует...**', colour = discord.Color.red()))
+        await ctx.send(embed = discord.Embed(description ='** :x: Ой!~ Такой команды не существует...**', colour = discord.Color.red()))
         await ctx.send(embed = discord.Embed(description ='** Напиши $help, чтобы узнать существующие команды~**', colour = discord.Color.red()))
 
 #@client.event
