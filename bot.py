@@ -43,6 +43,11 @@ async def hi( ctx ):
 async def ЗОО( ctx ):
 	author = ctx.message.author
 	await ctx.send( f'**Fuck youuuu!{author.mention}**' )
+@client.command()
+async def gym( ctx ):
+	author = ctx.message.author
+	await ctx.send( f'**Come on, lets go! {author.mention}**' )
+	await ctx.send( 'https://media.discordapp.net/attachments/732325941287845931/733032131877404832/tenor_2.gif' )
 #clear
 @client.command()
 @commands.has_permissions( administrator = True )
