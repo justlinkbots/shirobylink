@@ -40,9 +40,10 @@ async def hi( ctx ):
 	await ctx.send( f'**Привет, {author.mention}! Рада тебя видеть! Я бот Shiro~**' )
 
 @client.command()
-async def ЗОО( ctx ):
+async def van( ctx ):
 	author = ctx.message.author
 	await ctx.send( f'**Fuck youuuu!{author.mention}**' )
+	await ctx.send( 'https://tenor.com/bpiu8.gif' )
 @client.command()
 async def gym( ctx ):
 	author = ctx.message.author
@@ -102,6 +103,8 @@ async def help(ctx):
 	emb.add_field( name = '{}clear'.format(PREFIX), value = '• Очистка чата (Только для администраторов) •', inline=False)
 	emb.add_field( name = '{}kick'.format(PREFIX), value = '• Кикнуть >:( (Только для администраторов) •', inline=False)
 	emb.add_field( name = '{}mute'.format(PREFIX), value = '• Отправить в дурку ебать (Только для администраторов) •', inline=False)
+	emb.add_field( name = '{}gym'.format(PREFIX), value = '• Заглянуть в раздевалку качалки... (Делай на свой страх) •', inline=False)
+	emb.add_field( name = '{}van'.format(PREFIX), value = '• Позвать Вэна Даркхолма... •', inline=False)
 	await ctx.send( embed = emb)
 @clear.error
 async def perm_error(ctx,error):
