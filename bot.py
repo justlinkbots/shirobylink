@@ -5,9 +5,9 @@ PREFIX = '$'
 client = commands.Bot(command_prefix = PREFIX )
 client.remove_command('help')
 
-#trigeret_words = ['Shiro','Широ','shiro','широ']
-#goodbay_words = ['Пока','бб','ббак','пока','ББ','bb','BB']
-#spok_words = ['спок','спокойной ночи','сладких снов','Спокойной ночи','spok']
+trigeret_words = ['Shiro','Широ','shiro','широ']
+goodbay_words = ['Пока','бб','ббак','пока','ББ','bb','BB']
+spok_words = ['спок','спокойной ночи','сладких снов','Спокойной ночи','spok']
 
 @client.event
 async def on_ready():
@@ -23,16 +23,16 @@ async def on_command_error(ctx, error):
         await ctx.send(embed = discord.Embed(description ='** :x: Ой!~ Такой команды не существует...**', colour = discord.Color.red()))
         await ctx.send(embed = discord.Embed(description ='** Напиши $help, чтобы узнать существующие команды~**', colour = discord.Color.red()))
 
-#@client.event
-#async def on_message( message ):
-#	await client.process_commands(message)
-#	msg = message.content.lower()
-#	if msg in trigeret_words:
-#		await message.channel.send(f'Да~ Ты меня звал,{author.mention}?')
-#	if msg in goodbay_words:
-#		await message.channel.send(f'Пока,{author.mention}~')
-#	if msg in spok_words:
-#		await message.channel.send(f'Спокойной ночи,{author.mention}~')
+@client.event
+async def on_message( message ):
+	await client.process_commands(message)
+	msg = message.content.lower()
+	if trigeret_words in msg:
+		await message.channel.send(f'Да~ Ты меня звал,{author.mention}?')
+	if goodbay_words in msg:
+		await message.channel.send(f'Пока,{author.mention}~')
+	if spok_words in msg:
+		await message.channel.send(f'Спокойной ночи,{author.mention}~')
 
 @client.command()
 async def hi( ctx ):
