@@ -54,7 +54,7 @@ async def gym( ctx ):
 @commands.has_permissions( administrator = True )
 async def clear(ctx, amount : int ):
 	await ctx.channel.purge(limit = amount)
-	await ctx.send(embed = discord.Embed(description=f'**:white_check_mark: Готово!~ **', colour = discord.Color.green()) )
+	await ctx.send(embed = discord.Embed(description=f'**:white_check_mark: Получилось!~ Удалено {amount} сообщений~**', colour = discord.Color.green()) )
 
 #1000-7
 @client.command()
