@@ -55,7 +55,20 @@ async def gym( ctx ):
 async def clear(ctx, amount : int ):
 	await ctx.channel.purge(limit = amount)
 
-	await ctx.send(embed = discord.Embed(description=f'**:white_check_mark: Получилось!~ Удалено {amount} сообщений~**', colour = discord.Color.green()) )
+#1000-7
+@client.command()
+async def imghoul( ctx ):
+	author = ctx.message.author
+	await ctx.send( f'Я........ Гуль....')
+	await ctx.send( f'https://media.discordapp.net/attachments/801689989964496926/847032579701735444/tenor.gif')
+	a = 0
+	b = 1000
+	while a == 0:
+    		c = b - 7
+    		if c > 1:
+        		await ctx.send(c,f'- 7')
+    		b = c
+	
 
 
 #kick
